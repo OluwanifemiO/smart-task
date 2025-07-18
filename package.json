@@ -1,6 +1,9 @@
 {
   "name": "smart-task",
   "version": "0.1.0",
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -11,22 +14,25 @@
   "dependencies": {
     "@google/genai": "^1.5.1",
     "@google/generative-ai": "^0.24.1",
-    "@prisma/client": "^6.9.0",
+    "@prisma/client": "^6.11.1",
+    "@prisma/extension-accelerate": "^2.0.2",
     "next": "15.3.3",
     "next-auth": "^4.24.11",
-    "prisma": "^6.9.0",
+    "next-navigation": "^1.0.6",
+    "prisma": "^6.11.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^20.19.4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }

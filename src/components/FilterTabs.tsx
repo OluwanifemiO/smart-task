@@ -1,5 +1,5 @@
 'use client'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {Task} from "@prisma/client";
 import SmartTaskInput from "@/components/SmartTaskInput";
 import TaskModal from "@/components/TaskModal";
@@ -79,6 +79,7 @@ export default function FilterTabs({initialTasks}: FilterTabsProps) {
 
     function formatDueDate(date: Date): string {
         const now = new Date();
+
         const isToday =
             date.getDate() === now.getDate() &&
             date.getMonth() === now.getMonth() &&
@@ -92,28 +93,50 @@ export default function FilterTabs({initialTasks}: FilterTabsProps) {
             date.getMonth() === tomorrow.getMonth() &&
             date.getFullYear() === tomorrow.getFullYear();
 
-        const timeString = date.toLocaleTimeString(undefined, {
-            hour: 'numeric',
-            minute: '2-digit',
-            hour12: true,
-        });
+        // If it's due in a different year
+        const isDifferentYear = date.getFullYear() !== now.getFullYear();
 
         if (isToday) {
+            const timeString = date.toLocaleTimeString(undefined, {
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true,
+            });
             return `Today, ${timeString}`;
         } else if (isTomorrow) {
+            const timeString = date.toLocaleTimeString(undefined, {
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true,
+            });
             return `Tomorrow, ${timeString}`;
+        } else if (isDifferentYear) {
+            return date.toLocaleString(undefined, {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true,
+            });
         } else {
             const weekday = date.toLocaleDateString(undefined, {
                 weekday: 'long',
+            });
+            const timeString = date.toLocaleTimeString(undefined, {
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true,
             });
             return `${weekday}, ${timeString}`;
         }
     }
 
+
     function isPastDue(date: Date): boolean {
         const today = new Date();
 
-        // Set both dates to midnight (00:00) to ignore the time
         const dueDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds());
         const currentDate = new Date(today.getFullYear(), today.getMonth(), today.getDate(), today.getHours(), today.getMinutes(), today.getSeconds());
 

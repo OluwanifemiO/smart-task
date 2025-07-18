@@ -1,8 +1,9 @@
 // /app/api/tasks/[id]/route.ts
 import { PrismaClient } from '@prisma/client';
 import { NextRequest, NextResponse } from 'next/server';
+import {withAccelerate} from "@prisma/extension-accelerate";
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient().$extends(withAccelerate());
 
 export async function GET(req: NextRequest, context: { params: { id: string } }) {
     const { id } = context.params;

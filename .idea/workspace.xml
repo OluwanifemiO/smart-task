@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc8168fb-6de6-46ba-8260-e6c4506f3de2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/smart-task.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/20250609211315_todos/migration.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/migrations/migration_lock.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/createTask.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/tasks/[id]/complete/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/tasks/[id]/complete/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/tasks/[id]/delete/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/tasks/[id]/delete/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/tasks/[id]/edit/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/tasks/[id]/edit/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/tasks/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/tasks/[id]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/tasks/create-smart/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/tasks/create-smart/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/tasks/create/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/tasks/create/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/tasks/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/tasks/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FilterTabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterTabs.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="cc8168fb-6de6-46ba-8260-e6c4506f3de2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +75,7 @@
       <workItem from="1752155783196" duration="831000" />
       <workItem from="1752157080387" duration="17000" />
       <workItem from="1752772309677" duration="17393000" />
-      <workItem from="1752848076660" duration="462000" />
+      <workItem from="1752848076660" duration="697000" />
     </task>
     <servers />
   </component>

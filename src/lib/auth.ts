@@ -97,6 +97,7 @@ export const authConfig: NextAuthOptions = {
                 if (!existingUser) {
                     await prisma.user.create({
                         data: {
+                            id: user.id,
                             name: user.name!,
                             email: user.email!,
                             password: 'google-oauth', // or leave undefined if not in schema

@@ -4,10 +4,10 @@ import {withAccelerate} from "@prisma/extension-accelerate";
 
 const prisma = new PrismaClient().$extends(withAccelerate());
 
-export async function DELETE(req: NextRequest, context: { params: { id: string } }) {
-    const { id } = context.params;
+export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
+
     const taskId = parseInt(id);
-    console.log(taskId);
 
     if (isNaN(taskId)) {
         return NextResponse.json({ error: 'Invalid task ID' }, { status: 400 });

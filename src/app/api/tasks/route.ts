@@ -1,11 +1,11 @@
 // /app/api/tasks/[id]/route.ts
 import { PrismaClient } from '@prisma/client';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import {withAccelerate} from "@prisma/extension-accelerate";
 
 const prisma = new PrismaClient().$extends(withAccelerate());
 
-export async function GET(req: NextRequest) {
+export async function GET() {
     try {
         const tasks = await prisma.task.findMany();
 

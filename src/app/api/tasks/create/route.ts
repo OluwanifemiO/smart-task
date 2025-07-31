@@ -23,8 +23,7 @@ export async function POST(req: NextRequest) {
         const priorityLevel = convertedPL.toLowerCase();
         const dueDateRaw = formData.get('dueDate') as string;
         const dueDate = new Date(dueDateRaw);
-        console.log('raw date' + dueDateRaw, 'converted' + dueDate);
-        const userId:number = Number(session?.user.id);
+        const userId = session?.user.id;
 
         const newTask = await prisma.task.create({
             data:{
